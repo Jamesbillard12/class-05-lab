@@ -14,6 +14,7 @@ function sum (num1, num2) {
 testSum(4, 7)
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 
+
 /////////////////////////////////////
 /* Problem 2
 Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
@@ -40,7 +41,6 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply (num1, num2, num3) {
-  var sumAndMultiply =  num1 + ' and ' + num2 + ' and ' + num3 + ' to ' + [(num1 + num2 + num3)];
   return [(num1 + num2 + num3), (num1*num2*num3),'4 and 7 and 5 sum to 16.', 'The product of 4 and 7 and 5 is 140.'];
 }
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -77,11 +77,14 @@ Write a function called multiplyArray() that takes an array of numbers as its ar
 "The numbers 2,3,4 have a product of 24."
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
-// Write your code here
+// // Write your code here
+function multiplyArray(array) {
+  var myArray = 'The numbers ' + array[0] + ',' + array[1] + ',' + array[2] + ' have a product of ' + [(array[0]*array[1]*array[2])] + '.';
+  return [(array[0] * array[1] * array[2]), myArray];
+}
 
-// Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
-
+var testArray = [2,3,4];
+testMultiplyArray();
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Submit the link to the repo via Canvas.
 
 /////////////////////////////////////
@@ -94,7 +97,7 @@ Test this function by hand in the console to get it working, and when you think 
 /////////////////////////////////////
 /////////////////////////////////////
 /////////////////////////////////////
-
+//
 function testSum() {
   if (sum(4,7)[1] === 'The sum of 4 and 7 is 11.') {
     console.log('%c TEST FOR sum() PASSES', 'color: green');
